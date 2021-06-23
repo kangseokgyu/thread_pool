@@ -6,7 +6,7 @@ add_executable(test_main
 
 target_include_directories(test_main
   PUBLIC
-    ${thread_pool_SOURCE_DIR}/include
+    ${thread_pool_SOURCE_DIR}
 )
 
 find_package(Threads)
