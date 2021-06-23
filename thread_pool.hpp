@@ -8,6 +8,8 @@
 #include <thread>
 #include <vector>
 
+namespace jdi {
+
 class thread_pool {
 private:
   std::vector<std::thread> workers_;
@@ -65,5 +67,7 @@ void thread_pool::add_task(std::function<void()> &&task) {
   }
   tasks_cv_.notify_one();
 }
+
+} // namespace jdi
 
 #endif /* _THREAD_POOL_HPP_ */

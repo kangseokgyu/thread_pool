@@ -29,6 +29,8 @@ public:
 };
 
 int main() {
+  using namespace jdi;
+
   thread_pool pool(20);
   std::vector<task> tasks;
   for (int i = 0; i < 10; i++) {
